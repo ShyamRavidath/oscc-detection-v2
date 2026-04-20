@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 const LINKS = [
   { label: 'How It Works',     href: '#how-it-works',     id: 'how-it-works'     },
   { label: 'Biomarker Ranking', href: '#feature-importance', id: 'feature-importance' },
+  { label: 'Playground',       href: '#playground',       id: 'playground'       },
   { label: 'Screening Model',  href: '#clinical-utility', id: 'clinical-utility' },
   { label: 'The Science',      href: '#about',            id: 'about'            },
   { label: 'Contact',          href: '#contact',          id: 'contact'          },

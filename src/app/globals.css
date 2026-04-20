@@ -186,6 +186,7 @@ body::after {
 @media (min-width: 901px) and (max-width: 1200px) {
   .r-cu-grid { grid-template-columns: 360px 1fr !important; }
   .r-ab-grid { grid-template-columns: 280px 1fr !important; }
+  .r-pg-grid { grid-template-columns: 1fr 280px !important; }
 }
 
 /* ── Responsive overrides (≤900px) ── */
@@ -226,4 +227,7 @@ body::after {
   .r-about-nav-btn  { white-space: nowrap !important; flex-shrink: 0 !important; }
   .r-contact-grid   { grid-template-columns: 1fr !important; gap: 40px !important; }
   .r-footer-grid    { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .r-pg-grid        { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .r-pg-sliders     { grid-template-columns: 1fr !important; }
+  .r-pg-output      { position: static !important; top: auto !important; }
 }
