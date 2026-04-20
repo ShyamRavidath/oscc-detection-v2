@@ -8,10 +8,10 @@ Endpoints:
 """
 
 import os
-import math
 import traceback
 import numpy as np
 import joblib
+import json
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
@@ -28,7 +28,10 @@ CORS(app, origins=[
 # ── Model loading ──────────────────────────────────────────────────────────
 
 MODELS_DIR = os.path.join(os.path.dirname(__file__), "models")
-BIOMARKER_ORDER = ["HPX", "CP", "ORM2", "APOA1", "ALB", "HP", "C3", "SERPINA1"]
+DEFAULT_BIOMARKER_ORDER = ["HPX", "CP", "ORM2", "APOA1", "ALB", "HP", "C3", "SERPINA1"]
+FEATURE_ORDER_PATH = os.path.join(MODELS_DIR, "feature_order.json")
+
+BIOMARKER_ORDER = DEFAULT_BIOMARKER_ORDER.copy()
 
 scaler = None
 models = {}
@@ -37,6 +40,14 @@ models_loaded = False
 def load_models():
     global scaler, models, models_loaded
     try:
+        if os.path.exists(FEATURE_ORDER_PATH):
+            with open(FEATURE_ORDER_PATH, "r", encoding="utf-8") as f:
+                loaded_order = json.load(f)
+            if loaded_order != DEFAULT_BIOMARKER_ORDER:
+                raise ValueError(
+                    f"feature_order.json mismatch. Expected {DEFAULT_BIOMARKER_ORDER}, got {loaded_order}"
+                )
+
         scaler = joblib.load(os.path.join(MODELS_DIR, "scaler.pkl"))
         models["LR"] = joblib.load(os.path.join(MODELS_DIR, "lr_model.pkl"))
         models["RF"] = joblib.load(os.path.join(MODELS_DIR, "rf_model.pkl"))
@@ -46,32 +57,19 @@ def load_models():
     except Exception as e:
         models_loaded = False
         print(f"Model loading failed: {e}")
-        print("Server will return mock predictions.")
+        print("Server will return 503 until models are fixed.")
 
 load_models()
-
-# ── Mock prediction fallback ──────────────────────────────────────────────
-
-def mock_predict(features: list[float]) -> dict:
-    """Deterministic mock prediction based on a weighted sum."""
-    weights = [0.35, 0.10, 0.10, -0.10, -0.15, 0.10, 0.05, -0.05]
-    z = sum(w * f for w, f in zip(weights, features)) - 0.3
-    base = 1 / (1 + math.exp(-z))  # sigmoid
-    return {
-        "probability_tumor": round(base, 4),
-        "models": {
-            "LR": round(base * 0.97, 4),
-            "RF": round(min(base * 1.05, 0.9999), 4),
-            "SVM": round(base * 0.95, 4),
-        },
-        "mock": True,
-    }
 
 # ── Endpoints ─────────────────────────────────────────────────────────────
 
 @app.route("/api/health", methods=["GET"])
 def health():
-    return jsonify({"status": "ok", "models_loaded": models_loaded})
+    return jsonify({
+        "status": "ok",
+        "models_loaded": models_loaded,
+        "biomarker_order": BIOMARKER_ORDER,
+    })
 
 
 @app.route("/api/predict", methods=["GET", "POST"])
@@ -103,7 +101,10 @@ def predict():
 
     # Predict
     if not models_loaded:
-        return jsonify(mock_predict(features))
+        return jsonify({
+            "error": "Models are not loaded on server.",
+            "hint": "Verify lr_model.pkl, rf_model.pkl, svm_model.pkl, scaler.pkl, and feature_order.json in backend/models.",
+        }), 503
 
     try:
         X = np.array(features).reshape(1, -1)
@@ -115,7 +116,6 @@ def predict():
         return jsonify({
             "probability_tumor": avg,
             "models": probs,
-            "mock": False,
         })
     except Exception as e:
         traceback.print_exc()
