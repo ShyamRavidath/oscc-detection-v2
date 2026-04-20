@@ -150,7 +150,7 @@ export default function About() {
         >
           <h2 style={{
             fontFamily: SG,
-            fontSize: 'clamp(72px, 9vw, 128px)', fontWeight: 700, color: 'white',
+            fontSize: 'clamp(52px, 6vw, 88px)', fontWeight: 700, color: 'white',
             lineHeight: 1.0, letterSpacing: '-0.03em', margin: '0 0 24px',
           }}>The<br />science.</h2>
           <p style={{

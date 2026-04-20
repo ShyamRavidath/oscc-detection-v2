@@ -140,7 +140,7 @@ export default function ClinicalUtility() {
           <div style={{ fontFamily: SG, fontSize: 11, fontWeight: 600, color: '#555', letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: 20 }}>
             Scenario modelling · not clinical evidence
           </div>
-          <h2 style={{ fontFamily: SG, fontSize: 'clamp(72px, 9vw, 128px)', fontWeight: 700, color: 'white', lineHeight: 1.0, letterSpacing: '-0.03em', margin: '0 0 24px' }}>
+          <h2 style={{ fontFamily: SG, fontSize: 'clamp(52px, 6vw, 88px)', fontWeight: 700, color: 'white', lineHeight: 1.0, letterSpacing: '-0.03em', margin: '0 0 24px' }}>
             Screening<br />impact<br />model
           </h2>
           <p style={{ fontFamily: SG, fontSize: 18, color: '#aaa', lineHeight: 1.75, maxWidth: 560, margin: '0 0 32px' }}>

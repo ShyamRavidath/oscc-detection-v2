@@ -88,8 +88,8 @@ export default function FeatureImportance() {
         <div className="r-grid-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px, 5vw, 80px)', alignItems: 'end', marginBottom: 56 }}>
           <h2 style={{
             fontFamily: 'var(--font-space-grotesk), system-ui, sans-serif',
-            fontSize: 'clamp(52px, 6vw, 80px)', fontWeight: 700, color: 'white',
-            lineHeight: 1.0, letterSpacing: '-0.03em', margin: 0,
+            fontSize: 'clamp(40px, 4.5vw, 62px)', fontWeight: 700, color: 'white',
+            lineHeight: 1.05, letterSpacing: '-0.03em', margin: 0,
           }}>
             Protein<br />biomarker<br />ranking
           </h2>
