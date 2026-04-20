@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:emilkowal.ski)",
+      "Bash(npx skills:*)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --no-import-alias --use-npm)",
+      "Bash(cp -r temp_init/* .)",
+      "Bash(cp -r temp_init/.* .)",
+      "Bash(rm -rf temp_init)",
+      "Bash(cp -r temp_init/src .)",
+      "Bash(cp -r temp_init/public .)",
+      "Bash(cp temp_init/package.json .)",
+      "Bash(cp temp_init/package-lock.json .)",
+      "Bash(cp temp_init/tsconfig.json .)",
+      "Bash(npm run:*)",
+      "Bash(npx next:*)",
+      "Bash(npm install:*)",
+      "Bash(pip install:*)",
+      "Bash(python generate_mock_models.py)",
+      "Bash(gunzip -c \"C:\\\\Users\\\\nooby\\\\.claude\\\\projects\\\\d--new-oscc-website\\\\96449753-fd56-443f-a044-a8e5bc8399d1\\\\tool-results\\\\webfetch-1776555777228-bf4i0q.bin\")",
+      "Bash(python3 -c ':*)",
+      "Bash(python -c ':*)",
+      "Bash(cd /tmp)",
+      "Bash(npx tsc:*)",
+      "Bash(claude plugin:*)",
+      "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"biotech medical research dark landing page\" --design-system -p \"OralSense\")",
+      "Bash(xargs grep:*)",
+      "Bash(python3 scripts/search.py \"biotech medical research landing page minimal\" --design-system -p \"OralSense\")",
+      "Bash(python scripts/search.py \"biotech medical research landing page minimal\" --design-system -p \"OralSense\")",
+      "Bash(py scripts/search.py \"biotech medical research landing page minimal\" --design-system -p \"OralSense\")",
+      "Bash(py \"C:\\\\Users\\\\nooby\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"biotech medical research landing page minimal warm editorial\" --design-system -p \"OralSense\")",
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(ls *.bin)",
+      "Bash(python -c \"import sys,json; p=json.load\\(sys.stdin\\); print\\(list\\(p.get\\('dependencies',{}\\).keys\\(\\)\\)\\)\")",
+      "Bash(npx impeccable *)",
+      "Bash(node d:/new_oscc_website/.agents/skills/impeccable/scripts/cleanup-deprecated.mjs)",
+      "Bash(echo \"EXIT:$?\")"
+    ]
+  }
+}
