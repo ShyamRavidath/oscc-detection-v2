@@ -50,7 +50,7 @@ const QA: { short: string; title: string; content: ReactNode }[] = [
       <>
         HPX is a plasma glycoprotein that scavenges free heme, protecting tissue from oxidative stress. In OSCC, tumour-associated inflammation and local tissue breakdown elevate HPX detectably in saliva.
         <br /><br />
-        Across our model panel, HPX ranked consistently as the highest-importance feature. Importantly, HPX is not a cancer-specific marker — it is a triage biomarker whose utility depends on panel integration, population context, and threshold calibration. Elevated HPX signals elevated risk; it does not diagnose malignancy alone.
+        Across the model panel, HPX ranked consistently as the highest-importance feature. Importantly, HPX is not a cancer-specific marker — it is a triage biomarker whose utility depends on panel integration, population context, and threshold calibration. Elevated HPX signals elevated risk; it does not diagnose malignancy alone.
       </>
     ),
   },
@@ -61,7 +61,7 @@ const QA: { short: string; title: string; content: ReactNode }[] = [
       <>
         Nanobodies (VHH domains) are single-domain antibody fragments derived from camelid heavy-chain antibodies. At ~15 kDa — roughly one-tenth the mass of conventional IgG — they offer a uniquely compact, thermally stable binding scaffold.
         <br /><br />
-        For lateral flow applications this matters: nanobodies can be expressed in bacteria at scale, tolerate storage without refrigeration, and access epitopes that conventional antibodies cannot. Our HPX-targeting nanobody candidates were generated computationally, prioritised by pLDDT confidence scores and interface predicted aligned error (i_pAE). Wet-lab validation remains ongoing.
+        For lateral flow applications this matters: nanobodies can be expressed in bacteria at scale, tolerate storage without refrigeration, and access epitopes that conventional antibodies cannot. HPX-targeting nanobody candidates were generated computationally, prioritised by pLDDT confidence scores and interface predicted aligned error (i_pAE). Wet-lab validation remains ongoing.
       </>
     ),
   },

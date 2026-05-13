@@ -16,7 +16,7 @@ const phases = [
     title: "ML Model Training",
     period: "Feature Engineering & Classification",
     description:
-      "Trained an ensemble classifier (Logistic Regression, Random Forest, SVM) on 8 salivary protein biomarkers. Feature selection identified HPX, CP, and ORM2 as the top discriminators. Cross-validated AUC exceeded 0.93.",
+      "Trained an ensemble classifier (Logistic Regression, Random Forest, SVM) on 8 salivary protein biomarkers. Feature selection identified HPX, CP, and ORM2 as the top discriminators. Cross-validated AUC exceeded 0.98.",
     color: "var(--sage)",
   },
   {

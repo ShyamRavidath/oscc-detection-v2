@@ -83,7 +83,7 @@ export default function ImpactSection() {
                   Screening where it&apos;s needed most
                 </h3>
                 <p className="mt-4 text-[14px] sm:text-[15px] leading-relaxed text-muted max-w-[55ch] mx-auto">
-                  Our mission is to democratize oral cancer screening. By combining AI-designed nanobodies with the simplicity of lateral flow technology, we can bring accurate, affordable screening to community health workers in Southeast Asia, South Asia, and Sub-Saharan Africa, where OSCC prevalence is highest and diagnostic access is lowest.
+                  This project brings accurate, affordable oral cancer screening to community health workers in Southeast Asia, South Asia, and Sub-Saharan Africa — combining nanobody lateral flow technology with salivary proteomics to reach the regions where OSCC prevalence is highest and diagnostic access is lowest.
                 </p>
                 <div className="mt-8 flex flex-wrap justify-center gap-3">
                   {["No electricity needed", "Room-temp stable", "Trainable in minutes", "WHO-aligned"].map((tag) => (

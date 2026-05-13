@@ -52,7 +52,7 @@ export default function MLModelPage() {
           </h1>
           <p className="mt-4 text-base sm:text-lg leading-relaxed text-muted max-w-[55ch]">
             Enter 8 salivary biomarker concentrations to receive a tumor
-            probability estimate from our ensemble of Logistic Regression,
+            probability estimate from the ensemble of Logistic Regression,
             Random Forest, and SVM models.
           </p>
         </div>

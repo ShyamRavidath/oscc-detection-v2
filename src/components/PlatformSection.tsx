@@ -126,7 +126,7 @@ export default function PlatformSection() {
         {/* Bottom comparison table */}
         <div className={`mt-16 rounded-[1.5rem] p-[1px] bg-gradient-to-b from-white/[0.08] to-white/[0.02] ${visible ? "animate-fade-up delay-800" : "opacity-0"}`}>
           <div className="rounded-[calc(1.5rem-1px)] p-6 sm:p-8 overflow-x-auto" style={{ background: "rgba(255,255,255,0.03)" }}>
-            <h3 className="text-lg font-semibold text-cream mb-6">How we compare</h3>
+            <h3 className="text-lg font-semibold text-cream mb-6">How it compares</h3>
             <table className="w-full text-left text-[13px]">
               <thead>
                 <tr className="border-b border-white/[0.06]">

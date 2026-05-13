@@ -35,7 +35,7 @@ export default function ScienceSection() {
               ),
               title: "Salivary Biomarker",
               desc: "Hemopexin concentration in saliva shows strong differential expression between OSCC patients and healthy controls, making it an ideal non-invasive biomarker for point-of-care screening.",
-              detail: "AUC > 0.93 in validation studies",
+              detail: "AUC 0.73 in external validation",
             },
             {
               icon: (
@@ -49,7 +49,7 @@ export default function ScienceSection() {
                 </svg>
               ),
               title: "AI-Designed Nanobodies",
-              desc: "Using computational protein design, we engineer single-domain antibodies (nanobodies) with high affinity and specificity for hemopexin, eliminating the need for animal-derived antibodies.",
+              desc: "Using computational protein design, single-domain antibodies (nanobodies) were engineered with high affinity and specificity for hemopexin, eliminating the need for animal-derived antibodies.",
               detail: "~15 kDa, thermally stable",
             },
             {

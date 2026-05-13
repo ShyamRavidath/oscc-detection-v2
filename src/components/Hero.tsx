@@ -221,7 +221,7 @@ function LiveLFA({
 const STATS_DATA = [
   { target: 96.1,  fmt: (v: number) => v.toFixed(1) + '%', label: 'accuracy', color: '#f09b2d' },
   { target: 0.981, fmt: (v: number) => v.toFixed(3),        label: 'AUC',      color: '#f09b2d' },
-  { target: 70.4,  fmt: (v: number) => v.toFixed(1) + '%', label: 'sensitivity', color: '#bbb' },
+  { target: 73.0,  fmt: (v: number) => v.toFixed(1) + '%', label: 'sensitivity', color: '#bbb' },
   { target: 15,    fmt: ()           => '<15 min',           label: 'result',   color: '#ff2d55' },
 ];
 

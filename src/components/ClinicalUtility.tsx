@@ -59,7 +59,7 @@ function SliderRow({ label, unit, value, min, max, step, onChange, format }: {
 export default function ClinicalUtility() {
   const [pop, setPop] = useState(10000);
   const [prev, setPrev] = useState(1.0);
-  const [sens, setSens] = useState(70.4);
+  const [sens, setSens] = useState(73.0);
   const [spec, setSpec] = useState(90.6);
   const [biopsyCost, setBiopsyCost] = useState(845);
   const [lfaCost, setLfaCost] = useState(9);

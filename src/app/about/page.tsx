@@ -4,7 +4,7 @@ import { useInView } from "@/hooks/useInView";
 import MethodologyTimeline from "@/components/MethodologyTimeline";
 
 const outcomes = [
-  { value: "AUC > 0.93", label: "Model Performance", sub: "Cross-validated ROC area under curve" },
+  { value: "AUC 0.98", label: "Model Performance", sub: "Cross-validated ROC area under curve" },
   { value: "~94%", label: "Sensitivity", sub: "True positive rate for OSCC detection" },
   { value: "~90%", label: "Specificity", sub: "True negative rate in healthy controls" },
   { value: "< $2", label: "Cost Per Test", sub: "Materials cost at scale production" },
@@ -53,8 +53,8 @@ export default function AboutPage() {
             About the project
           </h1>
           <p className="mt-4 text-base sm:text-lg leading-relaxed text-muted max-w-[55ch]">
-            A multidisciplinary effort to bring accurate, affordable oral
-            cancer screening to the communities that need it most.
+            An independent research project building accurate, affordable oral
+            cancer screening for the communities that need it most.
           </p>
         </div>
 

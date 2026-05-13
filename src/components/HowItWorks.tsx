@@ -70,7 +70,7 @@ export default function HowItWorks() {
           <span style={{
             fontFamily: 'var(--font-dm-mono), monospace',
             fontSize: 10, color: '#555', letterSpacing: '0.14em',
-          }}>SENSITIVITY 70.4% · SPECIFICITY 90.6%</span>
+          }}>SENSITIVITY 73.0% · SPECIFICITY 90.6%</span>
         </div>
       </div>
     </section>
